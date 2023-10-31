@@ -5,44 +5,63 @@ namespace yzech2._1
     class Program
     {
         static void Main(string[] args)
-        {
-            int tem = 0;
-            int otr = -1;
+		{
+			try
+			{
+				// Создаем объект конвертера из библиотеки классов.
+				var converter = new ArrayConverter();
 
-            void chislo(params int[] numbers)
-            {       
-                
-                var str = string.Join(" ", numbers); 
-                Console.WriteLine("Вывод массива: " + str);
-            }
-            Console.WriteLine("Ввелите количество элементов массивва: ");
-            int num = int.Parse(Console.ReadLine());
-            int[] Array = new int[num];
-            int[] Array2 = new int[num];
-            Console.WriteLine("Введите элементы массива");
-            for (int i = 0; i < Array.Length; i++)
-            {
+				var numbers = InputData();
 
-                Array[i] = Int32.Parse(Console.ReadLine());                
-            }
-            foreach(int numb in Array)
-                if (numb > 0)
-                    for(int j = 0; j < Array.Length; j++)
-                        for(int t = 0; t < Array.Length-1; t++)
-                        {
-                            if(Array[t]*otr > Array[t+1]*otr)
-                            tem = Array[t];
-                            Array[t] = Array[t + 1];
-                            Array[t + 1] = tem;
-                        }
-            chislo(Array);
-           
-            
-            
+				converter.PrintArray(numbers);
+			}
+			// Если ввели не числовые значения.
+			catch (FormatException e)
+			{
+				Console.WriteLine("Ошибка ввода данных. Убедитесь, что вы ввели числовые значения.");
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine($"Во время работы возникла ошибка: {e.Message}");
+			}
+		}
 
+		/// <summary>
+		/// Функция ввода данных.
+		/// </summary>
+		private static int[] InputData()
+		{
+			int[] numbers;
+            Console.WriteLine("Введите количество элементов в массиве: ");
 
+			var numbersCount = int.Parse(Console.ReadLine());
 
-           
-        }
-    }
+			if (numbersCount <= 0)
+			{
+                Console.WriteLine("Введено неверное количество символов.");
+			}
+
+			numbers = new int[numbersCount];
+			Console.WriteLine("Введите элементы массива: ");
+			for (var i = 0; i < numbers.Length; i++)// Заполнение элементов в массив
+			{
+               
+				numbers[i] = int.Parse(Console.ReadLine());
+			}
+
+			return numbers;
+		}
+	}
+	public class ArrayConverter
+	{
+		/// <summary>
+		/// Функция принимает на вход массив и выводит его значения элементов в строку.
+		/// </summary>
+		/// <param name="arr">Непосредственно массив</param>
+		public void PrintArray(int[] arr)
+		{
+			var strArr = String.Join("", arr);// конвертируем элементы массива в строку 
+			Console.WriteLine(strArr);// Вывод массива
+		}
+	}
 }
