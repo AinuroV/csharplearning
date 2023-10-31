@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTask1", "GTask1.csproj", "{13069982-89F3-4148-A70A-630F8F10C432}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GTask1Lib", "..\GTask1Lib\GTask1Lib.csproj", "{A567F6A3-AF92-4FFC-9E95-E73820712E4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13069982-89F3-4148-A70A-630F8F10C432}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13069982-89F3-4148-A70A-630F8F10C432}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13069982-89F3-4148-A70A-630F8F10C432}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13069982-89F3-4148-A70A-630F8F10C432}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A567F6A3-AF92-4FFC-9E95-E73820712E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A567F6A3-AF92-4FFC-9E95-E73820712E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A567F6A3-AF92-4FFC-9E95-E73820712E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A567F6A3-AF92-4FFC-9E95-E73820712E4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {97F48BE8-2585-4A17-9347-F4CF612A9182}
+	EndGlobalSection
+EndGlobal
