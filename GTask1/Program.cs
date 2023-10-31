@@ -20,7 +20,7 @@ namespace GTask1
 
 				var numbers = InputData();
 
-				converter.PrintArray(numbers);
+				converter.PrintArray(numbers.Where(number => number > 0).ToArray());
 			}
 			// Если ввели не числовые значения.
 			catch (FormatException e)
